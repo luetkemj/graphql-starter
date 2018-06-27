@@ -1,0 +1,22 @@
+{
+  "name": "graphql-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prisma:deploy": "prisma deploy",
+    "playground": "graphql playground",
+    "start": "node src/index.js",
+    "dev": "run-p playground start"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "6.0.0",
+    "graphql-yoga": "1.14.10",
+    "jsonwebtoken": "8.3.0",
+    "prisma-binding": "2.1.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.3"
+  }
+}
