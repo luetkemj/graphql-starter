@@ -3,15 +3,17 @@ require('dotenv').config();
 const { GraphQLServer } = require('graphql-yoga');
 const { Prisma } = require('prisma-binding');
 
-const Query = require('./resolvers/Query')
-const Mutation = require('./resolvers/Mutation')
-const AuthPayload = require('./resolvers/AuthPayload')
+const Query = require('./resolvers/Query');
+const Mutation = require('./resolvers/Mutation');
+const AuthPayload = require('./resolvers/AuthPayload');
+
+const logger = require('./utils/logger.utils')();
 
 const resolvers = {
   Query,
   Mutation,
-  AuthPayload
-}
+  AuthPayload,
+};
 
 const server = new GraphQLServer({
   typeDefs: './src/schema.graphql',
@@ -27,4 +29,4 @@ const server = new GraphQLServer({
   }),
 });
 
-server.start(() => console.log('Server is running on port 4000'));
+server.start(() => logger.log('Server is running on port 4000'));

@@ -1,0 +1,5 @@
+extends: airbnb
+
+rules:
+  # this is a PITA when dealing with context from Prisma.
+  react/destructuring-assignment: 0
