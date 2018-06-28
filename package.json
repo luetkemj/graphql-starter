@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prisma:deploy": "prisma deploy",
-    "playground": "graphql playground",
-    "start": "node src/index.js",
     "dev": "run-p playground start",
     "lint:eslint": "eslint .",
-    "lint": "npm run lint:eslint"
+    "lint": "npm run lint:eslint",
+    "playground": "graphql playground",
+    "prisma:deploy": "prisma deploy",
+    "start": "node src/index.js",
+    "test": "echo 'No tests to run'"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
